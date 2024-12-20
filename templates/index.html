@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsão de Empréstimo</title>
+</head>
+<body>
+    <h1>Verifique a aprovação do empréstimo</h1>
+    <form action="/predict" method="post">
+        <label for="ApplicantIncome">Renda do Solicitante:</label>
+        <input type="number" step="0.01" name="ApplicantIncome" required><br><br>
+        <label for="LoanAmount">Valor do Empréstimo:</label>
+        <input type="number" step="0.01" name="LoanAmount" required><br><br>
+        <label for="Gender">Gênero (0=Feminino, 1=Masculino):</label>
+        <input type="number" name="Gender" min="0" max="1" required><br><br>
+        <label for="Married">Casado (0=Não, 1=Sim):</label>
+        <input type="number" name="Married" min="0" max="1" required><br><br>
+        <label for="Dependents">Dependentes (0, 1, 2, 3+):</label>
+        <input type="number" name="Dependents" min="0" max="3" required><br><br>
+        <label for="Education">Educação (0=Não Graduado, 1=Graduado):</label>
+        <input type="number" name="Education" min="0" max="1" required><br><br>
+        <label for="Self_Employed">Autônomo (0=Não, 1=Sim):</label>
+        <input type="number" name="Self_Employed" min="0" max="1" required><br><br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
